@@ -1,12 +1,14 @@
 import "./App.css";
-import data from "./data/single-sample";
-import { TrackComponent } from "./components";
+import data from "./data/all-sample";
+import TrackComponent from "./components/track/track.component";
 
 function App() {
   return (
     <section>
-      <div className="container">
-        <TrackComponent image={data.album.images[0].url} title={data.album.name} artist={data.artists[0].name} />
+      <div className="container-song">
+        {data.map((x) => {
+          return <TrackComponent key={x.album.id} image={x.album.images[0].url} title={x.album.name} artist={x.artists[0].name} />;
+        })}
       </div>
     </section>
   );
