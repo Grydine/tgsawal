@@ -2,8 +2,15 @@
   box-sizing: border-box;
 }
 
-.container {
+.container,
+.container-song {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0;
+}
+
+.container-song {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
